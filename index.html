@@ -4,16 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Amna Riaz | Portfolio</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-html {
-    scroll-behavior: smooth;
-}
+
+/* Basic styling */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
 :root {
     --bg: #ebe7e3;
     --paper: #f7f4f1;
@@ -22,6 +23,7 @@ html {
     --line: #cfc8c2;
     --black: #111;
 }
+
 body {
     background: var(--bg);
     color: var(--ink);
@@ -29,23 +31,19 @@ body {
     font-weight: 300;
     line-height: 1.8;
 }
+
 h1, h2, h3 {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 400;
     line-height: 1.15;
 }
-em {
-    font-style: italic;
-    font-weight: 500;
-}
-strong {
-    font-weight: 600;
-    color: var(--ink);
-}
-a {
-    text-decoration: none;
-    color: inherit;
-}
+
+em { font-style: italic; font-weight: 500; }
+
+strong { font-weight: 600; color: var(--ink); }
+
+a { text-decoration: none; color: inherit; }
+
 .card {
     background: var(--paper);
     max-width: 1100px;
@@ -53,7 +51,9 @@ a {
     padding: 60px 6%;
     box-shadow: 0 2px 14px rgba(0,0,0,.05);
 }
-/* Menu */
+
+/* Navigation menu */
+
 nav {
     max-width: 1100px;
     margin: 28px auto;
@@ -67,55 +67,59 @@ nav {
     z-index: 10;
     box-shadow: 0 2px 14px rgba(0,0,0,.05);
 }
+
 .logo {
     font-family: 'Cormorant Garamond', serif;
     font-size: 24px;
     font-weight: 600;
     font-style: italic;
-    letter-spacing: .5px;
 }
-.nav-links {
-    display: flex;
-    gap: 30px;
-}
+
+.nav-links { display: flex; gap: 30px; }
+
 .nav-links a {
     font-size: 11px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     font-weight: 500;
 }
+
 .nav-links a:hover {
     text-decoration: underline;
     text-underline-offset: 6px;
 }
-/* Home */
+
+/* Home section */
+
 .hero {
     display: grid;
     grid-template-columns: 1.1fr .9fr;
     gap: 30px;
     align-items: center;
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding: 70px 6%;
 }
+
 .rule {
     width: 60px;
     height: 1px;
     background: var(--ink);
     margin-bottom: 26px;
 }
+
 .hero h1 {
     font-size: clamp(38px, 5vw, 60px);
     margin-bottom: 24px;
 }
-.hero h1 b {
-    font-weight: 700;
-}
+
+.hero h1 b { font-weight: 700; }
+
 .hero p {
     color: var(--muted);
     font-size: 14px;
     max-width: 420px;
     margin-bottom: 32px;
 }
+
 .btn {
     display: inline-block;
     background: var(--black);
@@ -127,25 +131,28 @@ nav {
     text-transform: uppercase;
     transition: background .25s;
 }
-.btn:hover {
-    background: #3a3330;
-}
+
+.btn:hover { background: #3a3330; }
+
 .btn.ghost {
     background: transparent;
     color: var(--ink);
     border: 1px solid var(--ink);
     margin-left: 10px;
 }
+
 .btn.ghost:hover {
     background: var(--ink);
     color: white;
 }
+
 .visual {
     position: relative;
     justify-self: end;
     width: 100%;
     max-width: 340px;
 }
+
 .arch {
     width: 100%;
     aspect-ratio: 3/4;
@@ -153,12 +160,14 @@ nav {
     overflow: hidden;
     background: #bbb;
 }
+
 .arch img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     filter: grayscale(1) contrast(1.05);
 }
+
 .note {
     position: absolute;
     bottom: 18px;
@@ -171,34 +180,32 @@ nav {
     font-weight: 600;
     font-size: 18px;
 }
-/* Heading */
-.heading {
-    text-align: center;
-    margin-bottom: 46px;
-}
-.heading .rule {
-    margin: 0 auto 22px;
-}
-.heading h2 {
-    font-size: clamp(34px, 4vw, 46px);
-}
-.heading p {
-    color: var(--muted);
-    font-size: 13px;
-    margin-top: 8px;
-}
-/* About */
+
+/* Section headings */
+
+.heading { text-align: center; margin-bottom: 46px; }
+
+.heading .rule { margin: 0 auto 22px; }
+
+.heading h2 { font-size: clamp(34px, 4vw, 46px); }
+
+.heading p { color: var(--muted); font-size: 13px; margin-top: 8px; }
+
+/* About section */
+
 .about-grid {
     display: grid;
     grid-template-columns: 1.2fr .8fr;
     gap: 50px;
     align-items: start;
 }
+
 .about-grid p {
     color: var(--muted);
     font-size: 14px;
     margin-bottom: 18px;
 }
+
 .quote {
     border-left: 1px solid var(--ink);
     padding-left: 26px;
@@ -208,19 +215,15 @@ nav {
     font-size: 28px;
     line-height: 1.4;
 }
-.quote b {
-    font-weight: 700;
-}
-/* Education */
-.edu-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 28px;
-}
-.edu {
-    border-top: 1px solid var(--ink);
-    padding-top: 20px;
-}
+
+.quote b { font-weight: 700; }
+
+/* Education section */
+
+.edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+
+.edu { border-top: 1px solid var(--ink); padding-top: 20px; }
+
 .edu small {
     font-size: 11px;
     letter-spacing: 1.5px;
@@ -228,60 +231,49 @@ nav {
     color: var(--muted);
     font-weight: 500;
 }
-.edu h3 {
-    font-size: 28px;
-    font-weight: 600;
-    margin: 8px 0 10px;
-}
-.edu p {
-    color: var(--muted);
-    font-size: 13px;
-}
-/* Skills */
+
+.edu h3 { font-size: 28px; font-weight: 600; margin: 8px 0 10px; }
+
+.edu p { color: var(--muted); font-size: 13px; }
+
+/* Skills section */
+
 .skills {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 36px 30px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px 18px;
 }
-.skill {
-    border-top: 1px solid var(--line);
-    padding-top: 18px;
-}
-.skill h3 {
-    font-size: 25px;
-    font-weight: 600;
-    margin-bottom: 6px;
-}
-.skill:nth-child(even) h3 {
-    font-style: italic;
-    font-weight: 500;
-}
-.skill p {
-    color: var(--muted);
-    font-size: 13px;
-}
+
+.skill { border-top: 1px solid var(--line); padding-top: 10px; }
+
+.skill h3 { font-size: 20px; font-weight: 600; margin-bottom: 3px; }
+
+.skill:nth-child(even) h3 { font-style: italic; font-weight: 500; }
+
+.skill p { color: var(--muted); font-size: 11px; line-height: 1.5; }
+
 .skill .level {
     display: inline-block;
-    margin-top: 12px;
-    font-size: 10px;
+    margin-top: 6px;
+    font-size: 9px;
     font-weight: 500;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
     text-transform: uppercase;
     border: 1px solid var(--ink);
-    padding: 3px 11px;
+    padding: 2px 8px;
 }
-.skill .level.solid {
-    background: var(--black);
-    color: white;
-    border-color: var(--black);
-}
-/* Interests */
+
+.skill .level.solid { background: var(--black); color: white; border-color: var(--black); }
+
+/* Interests section */
+
 .chips {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 12px;
 }
+
 .chips span {
     border: 1px solid var(--line);
     padding: 10px 24px;
@@ -289,6 +281,7 @@ nav {
     background: white;
     font-weight: 400;
 }
+
 .chips span:nth-child(even) {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
@@ -296,17 +289,20 @@ nav {
     font-size: 19px;
     padding: 7px 24px;
 }
-/* Contact */
-.contact {
-    text-align: center;
-    padding: 80px 6%;
-}
+
+/* Contact section */
+
+.contact { text-align: center; padding: 80px 6%; }
+
 .contact p {
     color: var(--muted);
     font-size: 14px;
     max-width: 440px;
     margin: 0 auto 32px;
 }
+
+/* Footer */
+
 footer {
     text-align: center;
     font-size: 11px;
@@ -314,16 +310,17 @@ footer {
     color: var(--muted);
     padding: 10px 0 40px;
 }
-footer em {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 15px;
-}
-/* Mobile */
+
+footer em { font-family: 'Cormorant Garamond', serif; font-size: 15px; }
+
+/* Tablet screen */
+
 @media (max-width: 850px) {
-    .skills {
-        grid-template-columns: 1fr 1fr;
-    }
+    .skills { grid-template-columns: repeat(3, 1fr); }
 }
+
+/* Mobile screen */
+
 @media (max-width: 650px) {
     nav {
         flex-direction: column;
@@ -331,49 +328,44 @@ footer em {
         position: static;
         margin: 14px auto;
     }
-    .nav-links {
-        gap: 16px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .card {
-        margin-bottom: 14px;
-        padding: 45px 7%;
-    }
-    .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    .rule {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .hero p {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .visual {
-        justify-self: center;
-        order: -1;
-        max-width: 260px;
-    }
-    .note {
-        left: -8px;
-    }
-    .btn.ghost {
-        margin: 10px 0 0;
-    }
-    .about-grid, .edu-grid, .skills {
-        grid-template-columns: 1fr;
-    }
+
+    .nav-links { gap: 16px; flex-wrap: wrap; justify-content: center; }
+
+    .card { margin-bottom: 14px; padding: 45px 7%; }
+
+    .hero { grid-template-columns: 1fr; text-align: center; }
+
+    .rule { margin-left: auto; margin-right: auto; }
+
+    .hero p { margin-left: auto; margin-right: auto; }
+
+    .visual { justify-self: center; order: -1; max-width: 260px; }
+
+    .note { left: -8px; }
+
+    .btn.ghost { margin: 10px 0 0; }
+
+    .about-grid, .edu-grid { grid-template-columns: 1fr; }
+
+    .skills { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* Small mobile screen */
+
+@media (max-width: 400px) {
+    .skills { grid-template-columns: 1fr; }
+}
+
 </style>
 </head>
+
 <body>
 
-<!-- Menu -->
+<!-- Navigation menu -->
+
 <nav>
     <div class="logo">Amna Riaz</div>
+
     <div class="nav-links">
         <a href="#home">Home</a>
         <a href="#about">About</a>
@@ -383,145 +375,168 @@ footer em {
     </div>
 </nav>
 
-<!-- Home -->
+<!-- Home section -->
 <header class="card hero" id="home">
     <div>
         <div class="rule"></div>
+
         <h1>I am <b>Amna Riaz,</b> exploring <em>data and AI.</em></h1>
+
         <p>
             Learning <strong>Python</strong>, web development and problem
             solving, with a growing interest in Data Science, Analytics
             and Machine Learning.
         </p>
+
         <a href="#contact" class="btn">Get in touch</a>
         <a href="#about" class="btn ghost">My journey</a>
     </div>
+
     <div class="visual">
         <div class="arch">
-            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900" alt="Laptop with code on the screen">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900"
+                 alt="Laptop with code on the screen">
         </div>
         <div class="note">code. learn. create.</div>
     </div>
 </header>
 
-<!-- About -->
+<!-- About section -->
 <section class="card" id="about">
     <div class="heading">
         <div class="rule"></div>
         <h2>About <em>me</em></h2>
     </div>
+
     <div class="about-grid">
         <div>
             <p>
-                I’m a <strong>6th-semester BS Computer Science</strong> student with a
-                background in Computer Information Technology through a
-                Diploma of Associate Engineering (DAE).
+                I’m a <strong>6th-semester BS Computer Science</strong>
+                student with a background in Computer Information
+                Technology through a Diploma of Associate Engineering (DAE).
             </p>
+
             <p>
-                I know <strong>C++, OOP and Data Structures &amp; Algorithms</strong> well,
-                along with basic <strong>SQL</strong> and <strong>Python</strong>. I’m now learning advanced
-                Python, Data Analytics, Data Science, Machine Learning and AI to explore how data and
-                technology can solve real-world problems.
+                I know <strong>C++, OOP and Data Structures &amp; Algorithms</strong>
+                well, along with basic <strong>SQL</strong> and
+                <strong>Python</strong>. I’m now learning advanced Python,
+                Data Analytics, Data Science, Machine Learning and AI to
+                explore how data and technology can solve real-world problems.
             </p>
+
             <p>
                 I’m looking to build practical projects, find internship
-                opportunities and connect with professionals in <strong>Data and AI.</strong>
+                opportunities and connect with professionals in
+                <strong>Data and AI.</strong>
             </p>
         </div>
+
         <div class="quote">
-            Stay <b>curious.</b> Keep <b>learning.</b> Turn ideas into meaningful solutions.
+            Stay <b>curious.</b> Keep <b>learning.</b>
+            Turn ideas into meaningful solutions.
         </div>
     </div>
 </section>
 
-<!-- Skills -->
+<!-- Skills section -->
 <section class="card" id="skills">
     <div class="heading">
         <div class="rule"></div>
         <h2>My <em>skills</em></h2>
         <p>What I know and what I’m learning.</p>
     </div>
+
     <div class="skills">
+
         <div class="skill">
             <h3>C++</h3>
             <p>Programming fundamentals, functions, pointers, arrays and strings.</p>
             <span class="level solid">Strong</span>
         </div>
+
         <div class="skill">
             <h3>OOP</h3>
             <p>Classes, objects, inheritance, polymorphism, encapsulation and abstraction.</p>
             <span class="level solid">Strong</span>
         </div>
+
         <div class="skill">
             <h3>DSA</h3>
-            <p>Data structures and algorithms, from arrays and linked lists to trees, sorting and searching.</p>
+            <p>Data structures and algorithms, linked lists, trees, sorting and searching.</p>
             <span class="level solid">Comfortable</span>
         </div>
-        <div class="skill">
-            <h3>Problem Solving &amp; Logic</h3>
-            <p>Breaking problems into clear steps, writing algorithms and thinking through edge cases.</p>
-            <span class="level solid">Strong</span>
-        </div>
-        <div class="skill">
-            <h3>HTML</h3>
-            <p>Page structure, semantic tags, links, images and forms.</p>
-            <span class="level solid">Strong</span>
-        </div>
-        <div class="skill">
-            <h3>CSS</h3>
-            <p>Layouts with Flexbox and Grid, responsive design, fonts and colors.</p>
-            <span class="level solid">Strong</span>
-        </div>
-        <div class="skill">
-            <h3>JavaScript</h3>
-            <p>Basic concepts, variables, functions, loops and simple programming.</p>
-            <span class="level">Basic</span>
-        </div>
-        <div class="skill">
-            <h3>SQL</h3>
-            <p>Basic queries to create, read, update and filter data in databases.</p>
-            <span class="level">Basic</span>
-        </div>
-        <div class="skill">
-            <h3>Python</h3>
-            <p>Basics are clear (variables, loops, functions). Now moving on to advanced Python.</p>
-            <span class="level">Basic · Learning advanced</span>
-        </div>
-        <div class="skill">
-            <h3>Data Analytics</h3>
-            <p>Cleaning, exploring and understanding data to find useful insights.</p>
-            <span class="level">Learning</span>
-        </div>
-        <div class="skill">
-            <h3>Data Science</h3>
-            <p>Using data, statistics and programming to find patterns and answer questions.</p>
-            <span class="level">Learning</span>
-        </div>
+
         <div class="skill">
             <h3>Machine Learning</h3>
             <p>Understanding how machines learn from data and make predictions.</p>
             <span class="level">Learning</span>
         </div>
+
+        <div class="skill">
+            <h3>Problem Solving &amp; Logic</h3>
+            <p>Breaking problems into steps, writing algorithms and handling edge cases.</p>
+            <span class="level solid">Strong</span>
+        </div>
+
+        <div class="skill">
+            <h3>HTML</h3>
+            <p>Page structure, semantic tags, links, images and forms.</p>
+            <span class="level solid">Strong</span>
+        </div>
+
         <div class="skill">
             <h3>Artificial Intelligence</h3>
-            <p>Exploring intelligent systems and how they solve real-world problems.</p>
+            <p>Exploring intelligent systems and real-world applications.</p>
             <span class="level">Learning</span>
         </div>
+
+        <div class="skill">
+            <h3>CSS</h3>
+            <p>Flexbox, Grid, responsive design, fonts and colors.</p>
+            <span class="level solid">Strong</span>
+        </div>
+
+        <div class="skill">
+            <h3>JavaScript</h3>
+            <p>Variables, functions, loops and basic programming concepts.</p>
+            <span class="level">Basic</span>
+        </div>
+
+        <div class="skill">
+            <h3>SQL</h3>
+            <p>Basic database queries, creating, reading and updating data.</p>
+            <span class="level">Basic</span>
+        </div>
+
+        <div class="skill">
+            <h3>Python</h3>
+            <p>Python basics and currently learning advanced concepts.</p>
+            <span class="level">Basic · Learning advanced</span>
+        </div>
+
+        <div class="skill">
+            <h3>Data Science &amp; Analytics</h3>
+            <p>Exploring, cleaning and analyzing data to find useful patterns and insights.</p>
+            <span class="level">Learning</span>
+        </div>
+
     </div>
 </section>
 
-<!-- Education -->
+<!-- Education section -->
 <section class="card" id="education">
     <div class="heading">
         <div class="rule"></div>
         <h2>My <em>education</em></h2>
     </div>
+
     <div class="edu-grid">
         <div class="edu">
             <small>Currently in 6th semester</small>
             <h3>BS Computer Science</h3>
             <p>Studying programming, computer science fundamentals and emerging technologies.</p>
         </div>
+
         <div class="edu">
             <small>Computer Information Technology</small>
             <h3>Diploma of Associate Engineering</h3>
@@ -529,8 +544,7 @@ footer em {
         </div>
     </div>
 </section>
-
-<!-- Interests -->
+<!-- Interests section -->
 <section class="card" id="interests">
     <div class="heading">
         <div class="rule"></div>
@@ -543,8 +557,7 @@ footer em {
         <span>Machine Learning</span>
     </div>
 </section>
-
-<!-- Contact -->
+<!-- Contact section -->
 <section class="card contact" id="contact">
     <div class="heading">
         <div class="rule"></div>
@@ -554,15 +567,14 @@ footer em {
         I’m always happy to connect, learn and hear about internships
         and opportunities in technology.
     </p>
-    <a href="https://www.linkedin.com/in/amna-riaz-4643b2443/" target="_blank" rel="noopener noreferrer" class="btn">
+
+    <a href="https://www.linkedin.com/in/amna-riaz-4643b2443/"
+       target="_blank" rel="noopener noreferrer" class="btn">
         Connect on LinkedIn
     </a>
 </section>
-
-<!-- Footer -->
 <footer>
     Designed by <em>Amna Riaz</em> &nbsp;·&nbsp; © 2026
 </footer>
-
 </body>
 </html>
